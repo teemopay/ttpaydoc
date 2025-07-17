@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+th,
+td {
+  @apply border border-gray-200 dark:border-gray-700;
+  @apply py-2 px-4 !important;
+}

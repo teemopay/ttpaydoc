@@ -1,0 +1,86 @@
+---
+title: 银行列表
+description: 代付支持的银行列表
+---
+
+### BANK
+
+| bankCode/bankName                   |
+| ----------------------------------- |
+| ALBARAKA_ISLAMIC_BANK               |
+| ALLIED_BANK_LIMITED                 |
+| APNA_MICRO_FINANCE_BANK             |
+| ASKARI_BANK_LIMITED                 |
+| BANK_AL_HABIB_LIMITED               |
+| BANK_ALFALAH_LIMITED                |
+| BANK_ISLAMI_PAKISTAN_LIMITED        |
+| BANK_OF_KHYBER                      |
+| CITI_BANK_NA                        |
+| DUBAI_ISLAMIC_BANK_PAKISTAN_LIMITED |
+| FAYSAL_BANK_LIMITED                 |
+| FINCA_MICRO_FINANCE_BANK            |
+| FIRST_WOMEN_BANK_LIMITED            |
+| HABIB_BANK_LIMITED                  |
+| HABIB_METROPOLITAN_BANK_LIMITED     |
+| JS_BANK_LIMITED                     |
+| MCB_BANK_LIMITED                    |
+| MCB_ISLAMIC                         |
+| MEEZAN_BANK                         |
+| NATIONAL_BANK_OF_PAKISTAN           |
+| NRSP_MICRO_FINANCE_BANK             |
+| NIB_BANK_LIMITED                    |
+| SAMBA_BANK_LIMITED                  |
+| SILK_BANK_LIMITED                   |
+| SINDH_BANK_LIMITED                  |
+| SONERI_BANK_LIMITED                 |
+| STANDARD_CHARTERED_BANK_LTD         |
+| SUMMIT_BANK_LIMITED                 |
+| TELENOR_MICRO_FINANCE_BANK          |
+| THE_BANK_OF_PUNJAB                  |
+| U_MICRO_FINANCE_BANK                |
+| UNITED_BANK_LIMITED                 |
+|WASEELA_BANK|
+|MOBILINKBANK_PAKISTAN|
+|SADAPAY|
+|TAG|
+|AFT_IBFT|
+|KEENU_IMD_AND_IBFT_SCREEN_ADDITION|
+|CENTRAL_DIRECTORATE_OF_NATIONAL_SAVINGS|
+|ABHI_FINANCE_SERVICES_LIMITED|
+|KEENU|
+|AFT|
+|KEENU_BANK|
+|CENTRAL_DIRECTORATE_OF_NATIONAL_SAVINGS_CDNS|
+|AL_MEEZAN_INVESTMENT_MANAGEMENT_LIMITED|
+|SIMPAJSA|
+|ZARAI_TARAQITI_BANK|
+|SEEDCREED_FINACIAL_SERVICES_LIMITED|
+|KASB|
+|PAY_MAX|
+|BURJ|
+|WASEELA|
+|SIND|
+|NRSP|
+|MIB|
+|FIRST_MICROFINANCE_BANK|
+|NBP1|
+|FINJA|
+|NBP_FUND_MANAGEMENT_LIMITED|
+|NAYAPAY|
+|ZTBL1|
+|HBL_ASSET_MANAGEMENT|
+|TEZPAY|
+|PAY_MAX1|
+|BYKEA|
+|EZ_WAGE|
+|HUMRAAH_FINANCIAL_SERVICES|
+|NUMBERS_PRIVATE_LIMITED|
+|KEENU1|
+|CENTRAL_DIRECTORATE_OF_NATIONAL_SAVINGS_CDNS_IBFT_IMD_ADDITION|
+
+### E-Wallet
+
+| code      |
+| --------- |
+| EASYPAISA |
+| JAZZCASH  |
