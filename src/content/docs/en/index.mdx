@@ -1,5 +1,5 @@
 ---
-title: Teemopay docs
+title: TTpay docs
 description: Latin America's leading payment provider.
 template: splash
 hero:
@@ -8,12 +8,12 @@ hero:
     <span
       class="font-black text-transparent
         bg-clip-text bg-gradient-to-b
-        from-green-700 to-green-400
-        dark:from-green-500 dark:to-green-200"
+        from-[#2452D8] to-[#DEE4FE]
+        dark:from-[#2452D8] dark:to-[#DEE4FE]"
     >
-      Teemopay
+      TTpay
     </span>
-  tagline: Teemopay is Latin America's leading payment provider!
+  tagline: TTpay is Latin America's leading payment provider!
   image:
     file: /src/assets/teemo.svg
   actions:
@@ -21,10 +21,6 @@ hero:
       link: /en/guides/getting-started
       icon: right-arrow
       variant: primary
-    - text: Business
-      link: "https://teemopay.com"
-      variant: secondary
-      icon: external
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
@@ -34,7 +30,8 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
     Easy-to-use API interface allows you to easily complete the payment process
   </Card>
   <Card title="Stable Service" icon="setting">
-    Adopts advanced distributed technology to support high-concurrency payment requests
+    Adopts advanced distributed technology to support high-concurrency payment
+    requests
   </Card>
   <Card title="Customer Service" icon="open-book">
     24/7 stable customer service to make your payment process smoother

@@ -5,15 +5,14 @@ description: Merchant creates a cashier order
 
 ### Request URL
 
-| method | url                         |
-|--------|-----------------------------|
+| method | url                          |
+| ------ | ---------------------------- |
 | POST   | /api/checkout/payment/create |
-
 
 ### Headers
 
 | Header Parameter | Description       |
-|------------------| ----------------- |
+| ---------------- | ----------------- |
 | timestamp        | Request timestamp |
 | nonce            | Random value      |
 | country          | PK                |
@@ -22,7 +21,7 @@ description: Merchant creates a cashier order
 ### Request Parameters
 
 | Field           | Type   | Required | Length | Description                                                                                                       |
-|-----------------|--------| -------- | ------ |-------------------------------------------------------------------------------------------------------------------|
+| --------------- | ------ | -------- | ------ | ----------------------------------------------------------------------------------------------------------------- |
 | merchantOrderNo | String | yes      | 32     | Merchant order number                                                                                             |
 | paymentType     | Int    | no       |        | Payment method. When the transaction amount is ≤ 100,000, used to specify ep or jz. 303: easypaisa, 304: JazzCash |
 | paymentTypeList | String | no       |        | Allowed to send multiple payment methods separated by commas: 303, 304                                            |
@@ -33,13 +32,12 @@ description: Merchant creates a cashier order
 | callbackUrl     | String | no       | 200    | Callback URL                                                                                                      |
 | sign            | String | yes      |        | Signature                                                                                                         |
 
-
-```json title= request example 
+```json title= request example
 {
-    "merchantOrderNo": "OrderNoExample",
-    "amount": "1000",
-    "callbackUrl": "https://www.callbackexample.com",
-    "sign": "YOUR_SIGN"
+  "merchantOrderNo": "OrderNoExample",
+  "amount": "1000",
+  "callbackUrl": "https://www.callbackexample.com",
+  "sign": "YOUR_SIGN"
 }
 ```
 
@@ -55,20 +53,18 @@ description: Merchant creates a cashier order
 | expirationTime  | String | no       |        | Checkout page expiration time                 |
 | errorMsg        | String | no       |        | Error message, returned when failed           |
 
-
-
 ```json title= response example
 {
-    "msg": "success",
-    "traceId": "747bbf80261844ed85b809212aab0d81.85.17422898158610299",
-    "code": 200,
-    "data": {
-        "amount": "1000.00",
-        "tradeNo": "TS2501010001PK0000000000000000",
-        "expirationTime": "2025-01-01 00:00:00",
-        "checkoutLink": "https://pk-payin.teemopay.com/#/?tradeNo=TS2501010001PK0000000000000000",
-        "merchantOrderNo": "OrderNoExample",
-        "status": 0
-    }
+  "msg": "success",
+  "traceId": "747bbf80261844ed85b809212aab0d81.85.17422898158610299",
+  "code": 200,
+  "data": {
+    "amount": "1000.00",
+    "tradeNo": "TS2501010001PK0000000000000000",
+    "expirationTime": "2025-01-01 00:00:00",
+    "checkoutLink": "https://pk-payin.ttpaytech.com/#/?tradeNo=TS2501010001PK0000000000000000",
+    "merchantOrderNo": "OrderNoExample",
+    "status": 0
+  }
 }
 ```

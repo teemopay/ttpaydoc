@@ -12,7 +12,7 @@ description: Merchant requests to create a payment order
 ### Headers
 
 | Header Parameter | Description       |
-| ---------------- |-------------------|
+| ---------------- | ----------------- |
 | timestamp        | Request timestamp |
 | nonce            | Random value      |
 | country          | Country code (CO) |
@@ -21,17 +21,16 @@ description: Merchant requests to create a payment order
 ## Supported Payment Types (paymentType)
 
 | Payment Method Name        | PaymentType |
-|----------------------------| ----------- |
+| -------------------------- | ----------- |
 | PSE (Payment Online)       | 201         |
 | NEQUI (WALLET)             | 202         |
 | All (all in one checkoout) | 204         |
 | EFECTY (CASH)              | 205         |
 
-
 ### Request Parameters
 
 | Field           | Type   | Required | Length | Description                                           |
-| --------------- | ------ | -------- | ------ |-------------------------------------------------------|
+| --------------- | ------ | -------- | ------ | ----------------------------------------------------- |
 | merchantOrderNo | String | yes      | 32     | Merchant order number                                 |
 | paymentType     | Int    | yes      |        | Payment types, see list above                         |
 | amount          | String | yes      | 20     | Payin amount, integer only, in COP                    |
@@ -43,19 +42,16 @@ description: Merchant requests to create a payment order
 | sign            | String | yes      |        | Signature                                             |
 | callbackUrl     | String | no       | 200    | Callback URL                                          |
 
-
 ```json title="Request Example"
 {
-
-  "realName": "TeemoPay",
+  "realName": "TTpay",
   "amount": "10000",
   "phone": "1234567890",
   "callbackUrl": "https://www.callbackexample.com",
   "merchantOrderNo": "OrderNoExample",
-  "email": "TeemoPay@example.com",
+  "email": "TTpay@example.com",
   "paymentType": 204,
   "sign": "YOUR_SIGN"
-
 }
 ```
 
@@ -72,10 +68,8 @@ description: Merchant requests to create a payment order
 | status          | Int        | yes      |        | Payment status: 1 = Success, 3 = Failure             |
 | errorMsg        | String     | no       |        | Error message (returned only in case of failure)     |
 
-
 ```json title="Response Example"
 {
-  
   "msg": "success",
   "traceId": "747bbf80261844ed85b809212aab0d81.85.17422898158610299",
   "code": 200,
@@ -84,8 +78,7 @@ description: Merchant requests to create a payment order
     "tradeNo": "TS2501010001CO0000000000000000",
     "merchantOrderNo": "OrderNoExample",
     "paymentType": 204,
-    "additionalInfo": {
-    },
+    "additionalInfo": {},
     "paymentInfo": "https://www.paymentLinkExample.com",
     "status": 1
   }

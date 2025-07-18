@@ -21,7 +21,7 @@ description: Merchant requests to create a payment order
 ## Supported Payment Types (paymentType)
 
 | Payment Type Name   | PaymentType (Parameter) |
-|---------------------|-------------------------|
+| ------------------- | ----------------------- |
 | All-In-One Checkout | 601                     |
 | WEBPAY              | 602                     |
 | KHIPU               | 603                     |
@@ -37,37 +37,34 @@ BANK TRANSFER
 MACH
 PAGO46
 
-
-
 ### Request Parameters
 
-| Field           | Type   | Required | Length | Description                                                                                              |
-| --------------- | ------ | -------- | ------ |----------------------------------------------------------------------------------------------------------|
-| merchantOrderNo | String | Yes      | 32     | Merchant order number                                                                                    |
-| paymentType     | Int    | Yes      |        | Payment type                                                                                             |
-| realName        | String | Yes      | 50     | User name: uppercase, no special characters, within 50 characters                                        |
-| email           | String | No       | 50     | User email: must match regex pattern                                                                     |
-| amount          | String | Yes      | 20     | Payment amount (in pesos)                                                                                |
-| expirationTime  | Long   | No       |        | Expiration time |
-| phone           | String | No       | 20     | Phone number                                                                                             |
-| callbackUrl     | String | No       | 200    | Payment callback URL, if not provided, merchant configuration will be used                               |
-| sign            | String | Yes      |        | Signature                                                                                                |
+| Field           | Type   | Required | Length | Description                                                                |
+| --------------- | ------ | -------- | ------ | -------------------------------------------------------------------------- |
+| merchantOrderNo | String | Yes      | 32     | Merchant order number                                                      |
+| paymentType     | Int    | Yes      |        | Payment type                                                               |
+| realName        | String | Yes      | 50     | User name: uppercase, no special characters, within 50 characters          |
+| email           | String | No       | 50     | User email: must match regex pattern                                       |
+| amount          | String | Yes      | 20     | Payment amount (in pesos)                                                  |
+| expirationTime  | Long   | No       |        | Expiration time                                                            |
+| phone           | String | No       | 20     | Phone number                                                               |
+| callbackUrl     | String | No       | 200    | Payment callback URL, if not provided, merchant configuration will be used |
+| sign            | String | Yes      |        | Signature                                                                  |
 
 ```json title="Sample Request"
 {
-    "realName": "TeemoPay",
-    "amount": "10000",
-    "phone": "1234567890",
-    "callbackUrl": "https://www.callbackexample.com",
-    "merchantOrderNo": "OrderNoExample",
-    "email": "TeemoPay@example.com",
-    "paymentType": 601,
-    "sign": "YOUR_SIGN"
+  "realName": "TTpay",
+  "amount": "10000",
+  "phone": "1234567890",
+  "callbackUrl": "https://www.callbackexample.com",
+  "merchantOrderNo": "OrderNoExample",
+  "email": "TTpay@example.com",
+  "paymentType": 601,
+  "sign": "YOUR_SIGN"
 }
 ```
 
 ### Response Parameters
-
 
 | Field           | Type       | Required | Length | Description                                                                  |
 | --------------- | ---------- | -------- | ------ | ---------------------------------------------------------------------------- |
@@ -80,8 +77,6 @@ PAGO46
 | status          | Int        | yes      |        | Payout status: 1 = Success, 3 = Failed                                       |
 | errorMsg        | String     | no       |        | Error message, returned only if the payout failed                            |
 
-
-
 ```json
 {
   "msg": "success",
@@ -92,9 +87,7 @@ PAGO46
     "tradeNo": "TS2501010001CO0000000000000000",
     "merchantOrderNo": "OrderNoExample",
     "paymentType": 601,
-    "additionalInfo": {
-
-    },
+    "additionalInfo": {},
     "paymentInfo": "https://www.paymentLinkExample.com",
     "status": 1
   }

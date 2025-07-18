@@ -8,7 +8,7 @@ description: How merchants create and use public/private keys
 1. Create public and private keys (choose one of two methods)
    1. Method 1: Using command line;
    2. Method 2: Using key generation tool (recommended);
-2. Enter the generated public key in Teemopay and securely store your private key;
+2. Enter the generated public key in TTpay and securely store your private key;
 3. Encrypt and verify signatures when calling APIs;
 
 ## Operation Example
@@ -82,7 +82,7 @@ ldfIyZPoMCcJuqc=
 -----END PRIVATE KEY-----
 ```
 
-### Step 2: Enter the Generated Public Key in Teemopay and Securely Store Your Private Key
+### Step 2: Enter the Generated Public Key in TTpay and Securely Store Your Private Key
 
 Page path: Merchant Center >> Application List
 
@@ -90,11 +90,11 @@ If you don't have an application at this time, please click "Add Application" to
 
 If you already have an application, please click the small gear icon, enter the application settings page;
 
-![Application List](https://image.xiwu.me/2024/9c7cc0049a905d256fea469aa069e529.png)
+![Application List](/src/assets/keys/en/20250718-105222.429-1.jpg)
 
 In the application settings page, click the "Exchange Public Key" button, and enter the Google verification code in the pop-up window;
 
-![Application Settings](https://image.xiwu.me/2024/5932597de507a9164989ff96b5ae13fe.png)
+![Application Settings](/src/assets/keys/en/20250718-105222.429-2.jpg)
 
 After verifying the Google verification code, we will see the following interface in the pop-up window:
 
@@ -103,7 +103,7 @@ After verifying the Google verification code, we will see the following interfac
 3. Copy and save the "Platform Public Key", it will be used later;
 4. Note: The keys are paired, if you change the public key and private key, you need to change your merchant public key again;
 
-![Exchange Public Key](https://image.xiwu.me/2024/6ca888a3247afdba1b8a72be1ebb0bbf.png)
+![Exchange Public Key](/src/assets/keys/en/20250718-105222.429-3.jpg)
 
 ### Step 3: Encrypt and Verify Signatures When Calling APIs
 

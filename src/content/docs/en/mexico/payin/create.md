@@ -12,15 +12,13 @@ description: Create a payin order
 ### Headers
 
 | Header Parameter | Description             |
-| --------------- |-------------------------|
-| timestamp       | Request timestamp       |
-| nonce           | Random string           |
-| country         | Country code (e.g., MX) |
-| app_code        | Application ID          |
-
+| ---------------- | ----------------------- |
+| timestamp        | Request timestamp       |
+| nonce            | Random string           |
+| country          | Country code (e.g., MX) |
+| app_code         | Application ID          |
 
 ## Supported Payment Types (paymentType)
-
 
 | Payment Method Name                               | `paymentType` (request parameter) |
 | ------------------------------------------------- | --------------------------------- |
@@ -29,18 +27,15 @@ description: Create a payin order
 | PayCashRecurrent (Offline Cash Payment Recurrent) | 5                                 |
 | OXXO (Offline Cash Payment via OXXO)              | 6                                 |
 
-
 ### Notes
 
 For paymentType = 1 (VA), the repayment amount and frequency are determined by the user.
-The actual collected amount may be less than or more than the expected amount, 
+The actual collected amount may be less than or more than the expected amount,
 and multiple repayments may occur. Merchants must handle this logic properly.
 Each repayment can be uniquely identified using the paymentOrderNo field in the callback.
 
 For paymentType = 5 (PayCashRecurrent), multiple repayments may also occur.
 Each repayment is identified by the paymentOrderNo field in the callback.
-
-
 
 #### additionalInfo (Additional Fields) Description:
 
@@ -59,9 +54,9 @@ Each repayment is identified by the paymentOrderNo field in the callback.
 ### Request Parameters
 
 | Field           | Type   | Required | Length | Description                                                                                                |
-| --------------- | ------ | -------- | ------ |------------------------------------------------------------------------------------------------------------|
+| --------------- | ------ | -------- | ------ | ---------------------------------------------------------------------------------------------------------- |
 | merchantOrderNo | String | Yes      | 32     | Merchant order number                                                                                      |
-| paymentType     | Int    | Yes      |        | Payment Type: 1-Payment code  4-PayCashOnce(Single offline) 5-PayCashRecurrent(Multi offline)              |
+| paymentType     | Int    | Yes      |        | Payment Type: 1-Payment code 4-PayCashOnce(Single offline) 5-PayCashRecurrent(Multi offline)               |
 | realName        | String | Yes      | 50     | User name: Uppercase, no special characters, within 50 characters                                          |
 | email           | String | No       | 50     | User email: Must match regex pattern                                                                       |
 | amount          | String | Yes      | 20     | Collection amount (Peso)                                                                                   |
@@ -70,30 +65,23 @@ Each repayment is identified by the paymentOrderNo field in the callback.
 | callbackUrl     | String | No       | 200    | Payout callback URL, if not provided, merchant configuration will be used                                  |
 | sign            | String | Yes      |        | Signature                                                                                                  |
 
-
-
-
-
-
 ```json title="Request Example"
 {
-    "realName": "TeemoPay",
-    "amount": "1000.00",
-    "phone": "1000000000",
-    "sign": "YOUR_SIGN",
-    "callbackUrl": "https://www.callbackexample.com",
-    "merchantOrderNo": "OrderNoExample",
-    "email": "TeemoPay@example.com",
-    "paymentType": 1
+  "realName": "TTpay",
+  "amount": "1000.00",
+  "phone": "1000000000",
+  "sign": "YOUR_SIGN",
+  "callbackUrl": "https://www.callbackexample.com",
+  "merchantOrderNo": "OrderNoExample",
+  "email": "TTpay@example.com",
+  "paymentType": 1
 }
 ```
-
-
 
 ### Response Parameters
 
 | Field           | Type       | Required | Length | Description                                                             |
-| --------------- | ---------- | -------- | ------ |-------------------------------------------------------------------------|
+| --------------- | ---------- | -------- | ------ | ----------------------------------------------------------------------- |
 | merchantOrderNo | String     | yes      | 32     | Merchant order number                                                   |
 | tradeNo         | String     | yes      | 32     | Platform order number                                                   |
 | amount          | String     | yes      | 32     | Transaction amount                                                      |
@@ -102,8 +90,6 @@ Each repayment is identified by the paymentOrderNo field in the callback.
 | additionalInfo  | JSONObject | no       | -      | Additional information; used as supplementary data                      |
 | status          | Int        | yes      | -      | Status: 1 = Order created successfully, 3 = Failed                      |
 | errorMsg        | String     | no       | -      | Error message (returned when failed)                                    |
-
-
 
 ### Response Examples by PaymentType
 
@@ -118,7 +104,7 @@ Each repayment is identified by the paymentOrderNo field in the callback.
     "amount": "1000.00",
     "tradeNo": "TS2501010001MX0000000000000000",
     "additionalInfo": {
-      "paymentLink": "https://test-mx-payin.teemopay.com/TS2405220001MX0000315772003922"
+      "paymentLink": "https://test-mx-payin.ttpaytech.com/TS2405220001MX0000315772003922"
     },
     "merchantOrderNo": "OrderNoExample",
     "paymentInfo": "684180093000000000",
@@ -128,8 +114,7 @@ Each repayment is identified by the paymentOrderNo field in the callback.
 }
 ```
 
-####  PaymentType = 4 (PayCashOnce)
-
+#### PaymentType = 4 (PayCashOnce)
 
 ```json
 {
@@ -152,7 +137,6 @@ Each repayment is identified by the paymentOrderNo field in the callback.
 
 #### PaymentType = 5 (PayCashRecurrent)
 
-
 ```json
 {
   "msg": "success",
@@ -171,7 +155,8 @@ Each repayment is identified by the paymentOrderNo field in the callback.
   }
 }
 ```
-####  PaymentType = 6 (OXXO)
+
+#### PaymentType = 6 (OXXO)
 
 ```json
 {
