@@ -45,7 +45,7 @@ description: Merchant receives a payout result callback
   "errorCode": null,
   "errorMessage": null,
   "completeTime": "2025-05-01 00:00:00",
-  "sign": "TEEMO_SIGN"
+  "sign": "TTPAY_SIGN"
 }
 
 ```
@@ -62,7 +62,7 @@ description: Merchant receives a payout result callback
   "errorCode": 1004,
   "errorMessage": "Wallet limit exceeded, kindly contact user to upgrade or restore limit.",
   "completeTime": "2025-05-01 00:00:00",
-  "sign": "TEEMO_SIGN"
+  "sign": "TTPAY_SIGN"
 }
 
 

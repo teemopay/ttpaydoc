@@ -46,7 +46,7 @@ description: Merchant receives a payment result callback
   "paymentType": 204,
   "completeTime": "2025-01-01 00:00:00",
   "errorMessage": null,
-  "sign": "TEEMO_SIGN"
+  "sign": "TTPAY_SIGN"
 
 }
 ```

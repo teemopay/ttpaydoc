@@ -46,7 +46,7 @@ description: 商户接受一个代收结果的回调
     "paymentType": 304,
     "completeTime": "2025-01-01 00:00:00",
     "errorMessage": null,
-    "sign": "TEEMO_SIGN"
+    "sign": "TTPAY_SIGN"
 }
 ```
 
@@ -63,7 +63,7 @@ description: 商户接受一个代收结果的回调
     "paymentType": 304,
     "completeTime": "2025-01-01 00:00:00",
     "errorMessage": "Unstable network, kindly retry later.",
-    "sign": "TEEMO_SIGN"
+    "sign": "TTPAY_SIGN"
 }
 ```
 

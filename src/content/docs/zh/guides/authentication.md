@@ -72,7 +72,7 @@ public class SignUtils {
         jsonObject.put("idCardNumber", "1234567890");
         jsonObject.put("realName", "TEST");
         jsonObject.put("amount", "1000");
-        jsonObject.put("callbackUrl", "https://www.teemopay.com");
+        jsonObject.put("callbackUrl", "https://www.ttpaytech.com");
         jsonObject.put("paymentType", 1);
         jsonObject.put("email", "test@gmail.com");
         jsonObject.put("phone", "1234567890");

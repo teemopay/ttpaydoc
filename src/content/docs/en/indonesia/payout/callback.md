@@ -44,7 +44,7 @@ description: Received a Callback
   "status": 2,
   "amount": "1000.00",
   "serviceAmount": "60.00",
-  "sign": "TEEMO_SIGN"
+  "sign": "TTPAY_SIGN"
 }
 
 ```

@@ -51,7 +51,7 @@ description: Merchant receives a collection result callback
     "paymentType": 304,
     "completeTime": "2025-01-01 00:00:00",
     "errorMessage": null,
-    "sign": "TEEMO_SIGN"
+    "sign": "TTPAY_SIGN"
 }
 ```
 
@@ -70,7 +70,7 @@ description: Merchant receives a collection result callback
     "paymentType": 304,
     "completeTime": "2025-01-01 00:00:00",
     "errorMessage": "Unstable network, kindly retry later.",
-    "sign": "TEEMO_SIGN"
+    "sign": "TTPAY_SIGN"
 }
 ```
 

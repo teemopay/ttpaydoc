@@ -68,6 +68,6 @@ description: Merchant queries the status of a payment order
       "message": "Payment Successful"
     }
   ],
-  "sign": "TEEMO_SIGN",
+  "sign": "TTPAY_SIGN",
   "success": true
 }
