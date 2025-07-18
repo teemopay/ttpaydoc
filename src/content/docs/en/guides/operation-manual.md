@@ -12,7 +12,7 @@ The following are the introduction to each module:
 
 The home page mainly shows the merchant's account balance and transaction data. If you have business cooperation with TTpay in multiple countries, you can switch the account data of the country you want to view in the upper right corner.
 
-![Home Page](/src/assets/home/en/20250718-104640.388-1.jpg)
+![Home Page](/home/en/20250718-104640.388-1.jpg)
 
 ### Transaction Center
 
@@ -21,31 +21,31 @@ The transaction center mainly shows the merchant's transaction data, including t
 1. Payin Order
    The transaction center payin order shows the payin orders created by the merchant's program through API requests. You can search and verify the status and amount of the specified order by clicking the "Details" button. In some cases, an order is created, but the user can make multiple payments. To view such sub-orders, click the "Details" button.
 
-   ![Payin Order](/src/assets/home/en/20250718-104640.388-7.jpg)
+   ![Payin Order](/home/en/20250718-104640.388-7.jpg)
 
 2. Payout Order
    The transaction center payout order shows the payout orders created by the merchant's program through API requests. You can search and verify the status and amount of the specified order.
 
-   ![Payout Order](/src/assets/home/en/20250718-104640.388-2.jpg)
+   ![Payout Order](/home/en/20250718-104640.388-2.jpg)
 
 ### Financial Center
 
 1. Fund Management
    The financial center fund management is the merchant's account balance information display page. You can initiate: recharge, withdrawal, merchant transfer order, to manage the funds. Once you initiate the order, our financial staff will process it as soon as possible. If you want to expedite, please contact our business staff after submitting. It is worth mentioning that when you initiate a merchant transfer, knowing the other merchant's account number will be very important.
 
-   ![Fund Management](/src/assets/home/en/20250718-104640.388-3.jpg)
+   ![Fund Management](/home/en/20250718-104640.388-3.jpg)
 
 2. Account Details
    The financial center account details is the merchant's account transaction flow information display page. The transaction flow is generated after the transaction is completed, and the system will calculate and display it by day. You can view the daily inflow and outflow amounts and various fund data for the previous day and before on this page.
 
-   ![Account Details](/src/assets/home/en/20250718-104640.388-4.jpg)
+   ![Account Details](/home/en/20250718-104640.388-4.jpg)
 
 ### Download Center
 
 1. Download List
    Generally, the merchant's daily order data or other data will be very large, in order to provide a better export experience for the merchant (not to occupy the time of browsing pages or switching to other pages, not to make you feel stuck when exporting), we use asynchronous export. After you initiate the export, you only need to wait a moment, then switch to the download center to download the data file.
 
-   ![Download List](/src/assets/home/en/20250718-104640.388-5.jpg)
+   ![Download List](/home/en/20250718-104640.388-5.jpg)
 
 ### Merchant Center
 
@@ -56,14 +56,14 @@ The transaction center mainly shows the merchant's transaction data, including t
 
    This setting step is recommended to be completed by your development staff.
 
-   ![Application List](/src/assets/home/20250718-102242.jpeg)
+   ![Application List](/home/20250718-102242.jpeg)
 
-   ![Application Details](/src/assets/home/20250718-102333.jpeg)
+   ![Application Details](/home/20250718-102333.jpeg)
 
 2. Merchant Information
    The merchant information page in the merchant center displays your (merchant) basic information, which is convenient for you to view the payin and payout payment methods and fees (rates) that TTpay has opened for you.
 
-   ![Merchant Information](/src/assets/home/20250718-102435.jpeg)
+   ![Merchant Information](/home/20250718-102435.jpeg)
 
 ## Test Environment Manual Simulation Callback
 
@@ -75,9 +75,9 @@ To ensure the process is correct and your funds are safe, during the integration
 
 In the "Payin Order" and "Payout Order" list in the transaction center, you can initiate a simulated callback for orders in the "In Progress" status. After you create an order through the API, click the "Simulate Callback" button in the background page to callback. If you need to test status reversal, you need our test staff to manually callback for you. (Special note: For the Pakistan checkout, after creating it, you need to submit the form in the checkout, the order will enter the "In Progress" status, at this time you can simulate the callback.)
 
-![Payin Order](/src/assets/home/20250718-102702.jpeg)
+![Payin Order](/home/20250718-102702.jpeg)
 
-![Payout Order](/src/assets/home/20250718-102753.jpeg)
+![Payout Order](/home/20250718-102753.jpeg)
 
 ## Appendix
 

@@ -90,11 +90,11 @@ If you don't have an application at this time, please click "Add Application" to
 
 If you already have an application, please click the small gear icon, enter the application settings page;
 
-![Application List](/src/assets/keys/en/20250718-105222.429-1.jpg)
+![Application List](/keys/en/20250718-105222.429-1.jpg)
 
 In the application settings page, click the "Exchange Public Key" button, and enter the Google verification code in the pop-up window;
 
-![Application Settings](/src/assets/keys/en/20250718-105222.429-2.jpg)
+![Application Settings](/keys/en/20250718-105222.429-2.jpg)
 
 After verifying the Google verification code, we will see the following interface in the pop-up window:
 
@@ -103,7 +103,7 @@ After verifying the Google verification code, we will see the following interfac
 3. Copy and save the "Platform Public Key", it will be used later;
 4. Note: The keys are paired, if you change the public key and private key, you need to change your merchant public key again;
 
-![Exchange Public Key](/src/assets/keys/en/20250718-105222.429-3.jpg)
+![Exchange Public Key](/keys/en/20250718-105222.429-3.jpg)
 
 ### Step 3: Encrypt and Verify Signatures When Calling APIs
 
