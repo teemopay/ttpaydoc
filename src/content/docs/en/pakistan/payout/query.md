@@ -44,11 +44,11 @@ description: Merchant query the status of a payout order
 | tradeNo         | String | yes      |            | Platform order number                                                              |
 | amount          | String | yes      |            | Payout amount                                                                      |
 | status          | Int    | yes      |            | Payout status: 2 - Success, 3 - Failed                                             |
-| serviceAmount   | String | yes      |            | Service fee = fixed fee + (transaction amount \* service rate) (Added 20250506)    |
-| immService      | String | yes      |            | Fixed fee amount (Added 20250506)                                                  |
-| serviceRate     | String | yes      |            | Service rate (Added 20250506)                                                      |
-| errorCode       | number | yes      |            | Error code for failed order (Added 20250506)                                       |
-| errorMessage    | String | yes      |            | Error message for failed order (Added 20250506)                                    |
+| serviceAmount   | String | yes      |            | Service fee = fixed fee + (transaction amount \* service rate)  |
+| immService      | String | yes      |            | Fixed fee amount                                                |
+| serviceRate     | String | yes      |            | Service rate                                                    |
+| errorCode       | number | yes      |            | Error code for failed order                                     |
+| errorMessage    | String | yes      |            | Error message for failed order                                  |
 | completeTime    | String | yes      |            | Completion time in local time zone, format: yyyy-MM-dd HH\:mm\:ss (Added 20250506) |
 | ~~sign~~        | String | yes      |            | Signature (Removed on 20250506)                                                    |
 
