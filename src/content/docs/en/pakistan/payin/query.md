@@ -12,7 +12,7 @@ description: Merchant queries the status of a cashier order
 ### Headers
 
 | Header Parameter | Description             |
-|------------------| ----------------------- |
+| ---------------- | ----------------------- |
 | timestamp        | Request timestamp       |
 | nonce            | Random string           |
 | country          | Country code (e.g., PK) |
@@ -20,12 +20,10 @@ description: Merchant queries the status of a cashier order
 
 ### Request Parameters
 
-
 | Field           | Type   | Required | Length | Description           |
 | --------------- | ------ | -------- | ------ | --------------------- |
 | merchantOrderNo | String | Yes      | 32     | Merchant order number |
 | sign            | String | Yes      |        | Signature             |
-
 
 ```json title= request example
 {
@@ -36,9 +34,8 @@ description: Merchant queries the status of a cashier order
 
 ### Response Parameters
 
-
 | Field                         | Type      | Required | Length | Description                                                                                      |
-| ----------------------------- | --------- | -------- | ------ |--------------------------------------------------------------------------------------------------|
+| ----------------------------- | --------- | -------- | ------ | ------------------------------------------------------------------------------------------------ |
 | merchantOrderNo               | String    | Yes      | 32     | Merchant order ID                                                                                |
 | tradeNo                       | String    | Yes      |        | Platform order ID                                                                                |
 | paymentType                   | Integer   | Yes      |        | Payment method: fixed as 0                                                                       |
@@ -59,7 +56,6 @@ description: Merchant queries the status of a cashier order
 | ├─ immService                 | String    | Yes      |        | Fixed service fee (Added on 2025-05-06)                                                          |
 | ├─ paymentType                | Integer   | Yes      |        | Actual payment method (Added on 2025-05-06)                                                      |
 | ├─ completeTime               | String    | Yes      |        | Completion time in current country timezone, format: yyyy-MM-dd HH\:mm\:ss (Added on 2025-05-06) |
-| ~~sign~~                      | String    | Yes      |        | Signature (Removed on 2025-05-06)                                                                |
 
 ```json title= response example
 {
