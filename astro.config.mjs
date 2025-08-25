@@ -162,6 +162,46 @@ export default defineConfig({
               },
             ],
           },
+          {
+            id: "russia",
+            label: {
+              en: "🇷🇺 russia",
+              zh: "🇷🇺 俄罗斯",
+            },
+            link: "/russia/payin/create",
+            items: [
+              {
+                label: "Payin",
+                translations: {
+                  zh: "代收",
+                },
+                items: [
+                  "russia/payin/create",
+                  "russia/payin/callback",
+                  "russia/payin/query",
+                ],
+              },
+              {
+                label: "Payout",
+                translations: {
+                  zh: "代付",
+                },
+                items: [
+                  "russia/payout/create",
+                  "russia/payout/callback",
+                  "russia/payout/query",
+                  "russia/payout/bank",
+                ],
+              },
+              {
+                label: "Inquire",
+                translations: {
+                  zh: "查询",
+                },
+                items: ["indonesia/inquire/balance", "indonesia/inquire/bill"],
+              },
+            ],
+          },
         ]),
       ],
       // 重新渲染组件
