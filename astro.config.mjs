@@ -197,7 +197,7 @@ export default defineConfig({
                 translations: {
                   zh: "查询",
                 },
-                items: ["indonesia/inquire/balance", "indonesia/inquire/bill"],
+                items: ["russia/inquire/balance", "russia/inquire/bill"],
               },
             ],
           },
