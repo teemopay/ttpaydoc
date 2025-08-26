@@ -190,7 +190,6 @@ export default defineConfig({
                   "russia/payout/create",
                   "russia/payout/callback",
                   "russia/payout/query",
-                  "russia/payout/bank",
                 ],
               },
               {

@@ -26,24 +26,24 @@ description: 商户请求创建一个代收订单
 
 ### 请求参数
 
-| 字段            | 类型   | 必需 | 最大长度 | 描述                                                      |
-| --------------- | ------ | ---- | -------- |---------------------------------------------------------|
-| merchantOrderNo | String | yes  | 32       | 商户订单号                                                   |
-| paymentType     | Int    | yes  |          | 支付方式: 701                                               |
-| amount          | String | yes  | 20       | 代收金额 （卢布）                                               |
-| realName        | String | yes  | 64       | 用户姓名                                                    |
-| phone           | String | yes  | 13       | 手机号 11位                                                 |
-| sign            | String | yes  |          | 签名                                                      |
-| callbackUrl     | String | no   | 200      | 回调地址                                                    |
+| 字段            | 类型      | 必需 | 最大长度 | 描述                 |
+| --------------- |---------| ---- |------|--------------------|
+| merchantOrderNo | String  | yes  | 32   | 商户订单号              |
+| paymentType     | Integer | yes  | 20   | 支付方式: （701：全部支付方式） |
+| amount          | String  | yes  | 20   | 代收金额 （卢布）          |
+| realName        | String  | yes  | 64   | 用户姓名               |
+| phone           | String  | yes  | 13   | 手机号 11位            |
+| sign            | String  | yes  |      | 签名                 |
+| callbackUrl     | String  | no   | 200  | 回调地址               |
 
 ```json
 {
-  "merchantOrderNo":"********",
+  "merchantOrderNo":"1111111111",
   "paymentType":701,
   "amount": 100,
   "realName": "realName",
   "phone": "00000000000",
-  "sign": "*******"
+  "sign": "you sign"
 }
 ```
 
