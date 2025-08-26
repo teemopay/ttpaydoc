@@ -31,7 +31,7 @@ description: Create a payout order
 | bankCode        | String | no       | 50     | Bank code                                                                   |
 | bankName        | String | no      | 50     | Bank name                                                                   |
 | accountType     | Int    | yes      |        | 701: TRANSFER                                                               |
-| bankAccount     | String | yes      | 255    | When accountType is 701, this parameter transmits the recipient's phone number. The length is 11 digits.                                                                            |
+| bankAccount     | String | yes      | 255    | Card number: 16 digits in length                                                                         |
 | realName        | String | yes      | 255    | Account holder's name                                                       |
 | phone           | String | yes      | 10-13  | Phone number 11 digits                           |
 | callbackUrl     | String | no       | 200    | Callback URL for payout result; if not provided, defaults to merchant config |

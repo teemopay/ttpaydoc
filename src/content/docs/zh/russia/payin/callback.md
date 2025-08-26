@@ -32,7 +32,6 @@ description: 商户接受一个代收结果的回调
 | paymentInfo     | String | yes |     | 主要付款信息，返回的是实际用于付款的信息                             |
 | paymentType     | Int | yes |     | 支付方式                                             |
 | completeTime    | String | yes |     | 该流水的完成时间 当前国家时区 yyyy-MM-dd HH:mm:ss格式  |
-| channel         | String | no  |    | 支付方式扩展字段 |
 | errorMessage    | String | no  |     | 订单失败错误信息                                         |
 | sign            | String | yes |     | 签名                                               |
 
@@ -47,7 +46,6 @@ description: 商户接受一个代收结果的回调
     "paymentInfo": "https://www.paymentLinkExample.com",
     "paymentType": 502,
     "completeTime": "2025-01-01 00:00:00",
-    "channel": "DANA",
     "errorMessage": null,
     "sign": "TTPAY_SIGN"
 }
