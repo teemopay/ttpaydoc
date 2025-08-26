@@ -20,18 +20,18 @@ description: 商户请求创建一个代付订单
 
 ### 请求参数
 
-| 字段            | 类型      | 必需  | 最大长度 | 描述                                        |
-| --------------- |---------|-----|------|-------------------------------------------|
-| merchantOrderNo | String  | yes | 32   | 商户订单号                                     |
-| amount          | String  | yes | 20   | 代付金额,印尼盾,整数                               |
-| bankCode        | String  | no  | 50   | 银行编码                                      |
-| bankName        | String  | no | 50   | 银行名称                                      |
-| accountType     | Integer | yes | 10   | (701:银行转帐)                                |
+| 字段            | 类型      | 必需  | 最大长度 | 描述                                      |
+| --------------- |---------|-----|------|-----------------------------------------|
+| merchantOrderNo | String  | yes | 32   | 商户订单号                                   |
+| amount          | String  | yes | 20   | 代付金额,印尼盾,整数                             |
+| bankCode        | String  | no  | 50   | 银行编码                                    |
+| bankName        | String  | no | 50   | 银行名称                                    |
+| accountType     | Integer | yes | 10   | 701:银行转帐                                |
 | bankAccount     | String  | yes | 255  | (1. accountType=701时,此参数传递收款人的电话号码.长度11位) |
-| realName        | String  | yes | 255  | 用户姓名                                      |
-| phone           | Stirng  | yes | 13   | 用户电话                                      |
-| callbackUrl     | String  | no  | 200  | 代付回调地址，若不传, 则以商户配置为准                      |
-| sign            | String  | yes |      | 签名                                        |
+| realName        | String  | yes | 255  | 用户姓名                                    |
+| phone           | Stirng  | yes | 13   | 用户电话                                    |
+| callbackUrl     | String  | no  | 200  | 代付回调地址，若不传, 则以商户配置为准                    |
+| sign            | String  | yes |      | 签名                                      |
 
 ```json
 {
