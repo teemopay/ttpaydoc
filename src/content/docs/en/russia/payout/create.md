@@ -27,7 +27,7 @@ description: Create a payout order
 | Field           | Type   | Required | Length | Description                                                                 |
 | --------------- | ------ |----------| ------ |-----------------------------------------------------------------------------|
 | merchantOrderNo | String | yes      | 32     | Merchant order number                                                       |
-| amount          | String | yes      | 20     | Payout amount (in IDR), integer only                                        |
+| amount          | String | yes      | 20     | Payout amount (in Ruble)                                |
 | bankCode        | String | no       | 50     | Bank code                                                                   |
 | bankName        | String | no      | 50     | Bank name                                                                   |
 | accountType     | Int    | yes      |        | 701: TRANSFER                                                               |
