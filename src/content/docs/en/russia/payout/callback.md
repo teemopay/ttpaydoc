@@ -16,7 +16,7 @@ description: Received a Callback
 | ---------------- | ----------------- |
 | timestamp        | Request timestamp |
 | nonce            | Random string     |
-| country          | ID                |
+| country          | RU                |
 | appCode          | Application code  |
 
 

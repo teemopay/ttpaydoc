@@ -15,8 +15,8 @@ description: Merchant queries the status of a payment order
 | --------------- |-------------------|
 | timestamp      | Request timestamp |
 | nonce          | Random value      |
-| country        | Country code (ID) |
-| app_code       | Application ID    |
+| country        | Country code (RU) |
+| app_code       | Application RU    |
 
 ### Request Parameters
 
@@ -53,21 +53,31 @@ description: Merchant queries the status of a payment order
 
 ```json title="Response Example"
 {
-  "merchantOrderNo": "OrderNoExample",
-  "tradeNo": "TF201806251011",
-  "paymentType": 1,
-  "amount": "100",
-  "status": "2",
-  "remark": "Payment remarks",
-  "statementList": [
-    {
-      "paymentSingleOrderNo": "OrderNoExample",
-      "paymentStatementAmount": "100",
-      "paymentStatementStatus": "2",
-      "paymentStatementStatusName": "Payment Success",
-      "message": "Payment Successful"
-    }
-  ],
-  "sign": "TTPAY_SIGN",
-  "success": true
+  "code": 200,
+  "data": {
+    "merchantOrderNo": "OrderNoExample",
+    "amount": "60000.00",
+    "transactionAmount": "60000.00",
+    "tradeNo": "TS2501010001ID0000000000000000",
+    "paymentType": 701,
+    "paymentInfo": "https://www.paymentLinkExample.com",
+    "status": 2,
+    "serviceAmount": "605.00",
+    "statementList": [
+      {
+        "paymentSingleOrderNo": "TSOPaymentOrderNoExample",
+        "paymentStatementAmount": "60000.00",
+        "paymentStatementStatus": 2,
+        "paymentStatementStatusName": "代收成功",
+        "completeTime": "2025-01-01 00:00:00",
+        "serviceAmount": "605.00",
+        "serviceRate": "0.0100",
+        "immService": "5.00",
+        "paymentType": 701
+      }
+    ]
+  },
+  "msg": "success",
+  "traceId": "0801113131dd4951a36d19022a31b303.94.17423567008990449"
 }
+```

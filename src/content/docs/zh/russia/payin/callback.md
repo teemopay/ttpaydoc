@@ -16,7 +16,7 @@ description: 商户接受一个代收结果的回调
 |----------|--------|
 | timestamp | 请求时间戳  |
 | nonce    | 随机值    |
-| country  | ID     |
+| country  | RU     |
 | appCode  | 应用编码   |
 
 ### 代收回调
@@ -44,7 +44,7 @@ description: 商户接受一个代收结果的回调
     "paymentAmount": "60000.00", 
     "serviceAmount": "605.00",
     "paymentInfo": "https://www.paymentLinkExample.com",
-    "paymentType": 502,
+    "paymentType": 701,
     "completeTime": "2025-01-01 00:00:00",
     "errorMessage": null,
     "sign": "TTPAY_SIGN"

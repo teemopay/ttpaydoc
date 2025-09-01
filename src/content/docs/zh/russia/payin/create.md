@@ -15,7 +15,7 @@ description: 商户请求创建一个代收订单
 | ----------- | ------------ |
 | timestamp   | 请求时间戳   |
 | nonce       | 随机值       |
-| country     | ID           |
+| country     | RU           |
 | app_code    | app 编号     |
 
 ## 支持支付方式列表（paymentType）
@@ -26,21 +26,21 @@ description: 商户请求创建一个代收订单
 
 ### 请求参数
 
-| 字段            | 类型      | 必需 | 最大长度 | 描述                      |
-| --------------- |---------| ---- |------|-------------------------|
-| merchantOrderNo | String  | yes  | 32   | 商户订单号                   |
-| paymentType     | Integer | yes  | 20   | 支付方式: 【701: ALL IN ONE】 |
-| amount          | String  | yes  | 20   | 代收金额 【货币:卢布】            |
-| realName        | String  | yes  | 64   | 用户姓名                    |
-| phone           | String  | yes  | 13   | 手机号 11位                 |
-| sign            | String  | yes  |      | 签名                      |
-| callbackUrl     | String  | no   | 200  | 回调地址                    |
+| 字段            | 类型      | 必需 | 最大长度 | 描述                                                   |
+| --------------- |---------| ---- |------|------------------------------------------------------|
+| merchantOrderNo | String  | yes  | 32   | 商户订单号                                                |
+| paymentType     | Integer | yes  | 20   | 支付方式: 【701: ALL IN ONE】                              |
+| amount          | String  | yes  | 20   | 代收金额 【货币:卢布】                                         |
+| realName        | String  | yes  | 64   | 用户姓名。不得包含特殊字符，建议使用全大写，长度不少于 2 个字母；无需严格校验，但需符合正常姓名格式。 |
+| phone           | String  | yes  | 13   | 手机号 11位                                              |
+| sign            | String  | yes  |      | 签名                                                   |
+| callbackUrl     | String  | no   | 200  | 代收回调地址，若不传, 则以商户配置为准                                 |
 
 ```json
 {
-  "merchantOrderNo":"1111111111",
+  "merchantOrderNo":"213213419",
   "paymentType":701,
-  "amount": 100,
+  "amount":120000,
   "realName": "realName",
   "phone": "00000000000",
   "sign": "you sign"
@@ -62,17 +62,18 @@ description: 商户请求创建一个代收订单
 
 ```json
 {
-  "msg": "success",
-  "traceId": "747bbf80261844ed85b809212aab0d81.85.17422898158610299",
   "code": 200,
   "data": {
-    "amount": "60000.00",
-    "tradeNo": "TS2501010001ID0000000000000000",
+    "merchantOrderNo": "213213419",
+    "amount": "120000",
+    "tradeNo": "TS2508280001RU0000367591928366",
+    "paymentType": 701,
+    "paymentInfo": "https://rpayzc.com/payin/GG6666/CSRPAYPA25082606201388897224",
     "additionalInfo": {},
-    "merchantOrderNo": "OrderNoExample",
-    "paymentInfo": "https://www.paymentLinkExample.com",
-    "paymentType": 502,
-    "status": 1
-  }
+    "status": 1,
+    "errorMsg": null
+  },
+  "msg": "success",
+  "traceId": "85f383d2d44f4ea5af8352932cb8427b.95.17567121909967183"
 }
 ```

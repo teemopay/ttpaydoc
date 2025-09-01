@@ -15,8 +15,8 @@ description: Merchant receives a payment result callback
 | ---------------- |-------------------|
 | timestamp        | Request timestamp |
 | nonce            | Random value      |
-| country          | ID                |
-| appCode          | Application ID    |
+| country          | RU                |
+| appCode          | Application RU    |
 
 ### Payment Callback
 
@@ -29,6 +29,7 @@ description: Merchant receives a payment result callback
 | paymentAmount   | String | yes      |        | Actual payment amount for this transaction       |
 | serviceAmount   | String | yes      |        | Service fee e.g.: 18.02                          |
 | paymentInfo     | String | yes      |        | Main payment information used for actual payment |
+| completeTime    | String | yes      |        | Completion time of this transaction in local timezone, format: yyyy-MM-dd HH\:mm\:ss (Added 2025-05-06) |
 | paymentType     | Int    | yes      |        | Payment type                                     |
 | sign            | String | yes      |        | Signature                                        |
 
@@ -43,10 +44,10 @@ description: Merchant receives a payment result callback
   "paymentAmount": "1000.00",
   "serviceAmount": "10.00",
   "paymentInfo": "https://www.paymentLinkExample.com",
-  "paymentType": 204,
+  "paymentType": 701,
   "completeTime": "2025-01-01 00:00:00",
   "errorMessage": null,
-  "sign": "TTPAY_SIGN"
+  "sign": "sign"
 
 }
 ```

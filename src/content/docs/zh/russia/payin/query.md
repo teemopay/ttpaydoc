@@ -15,7 +15,7 @@ description: 商户查询一个代收订单的状态
 |---------------------------|--------|
 | timestamp                 | 请求时间戳  |
 | nonce                     | 随机值    |
-| country                   | ID     |
+| country                   | RU     |
 | app_code                  | app编号  |
 
 ### 请求参数
@@ -66,11 +66,10 @@ description: 商户查询一个代收订单的状态
     "amount": "60000.00",
     "transactionAmount": "60000.00",
     "tradeNo": "TS2501010001ID0000000000000000",
-    "paymentType": 502,
+    "paymentType": 701,
     "paymentInfo": "https://www.paymentLinkExample.com",
     "status": 2,
     "serviceAmount": "605.00",
-    "channel": "DANA",
     "statementList": [
       {
         "paymentSingleOrderNo": "TSOPaymentOrderNoExample",
@@ -81,7 +80,7 @@ description: 商户查询一个代收订单的状态
         "serviceAmount": "605.00",
         "serviceRate": "0.0100",
         "immService": "5.00",
-        "paymentType": 502
+        "paymentType": 701
       }
     ]
   },

@@ -15,8 +15,8 @@ description: Query a payout order
 | ---------------- |-------------------|
 | timestamp        | Request timestamp |
 | nonce            | Random value      |
-| country          | Country code (ID)  |
-| app_code         | Application ID    |
+| country          | Country code (RU)  |
+| app_code         | Application RU    |
 
 ### Request Parameters
 
@@ -39,7 +39,7 @@ description: Query a payout order
     },
     "merchantOrderNo": "OrderNoExample",
     "paymentInfo": "684180093000000000",
-    "paymentType": 1,
+    "paymentType": 701,
     "status": 1
   }
 }
