@@ -32,7 +32,7 @@ description: 商户请求创建一个代收订单
 | paymentType     | Integer | yes  | 20   | 支付方式: 【701: ALL IN ONE】                              |
 | amount          | String  | yes  | 20   | 代收金额 【货币:卢布】                                         |
 | realName        | String  | yes  | 64   | 用户姓名。不得包含特殊字符，建议使用全大写，长度不少于 2 个字母；无需严格校验，但需符合正常姓名格式。 |
-| phone           | String  | yes  | 13   | 手机号 11位                                              |
+| phone           | String  | yes  | 11   | 手机号 （长度:11位）                                         |
 | sign            | String  | yes  |      | 签名                                                   |
 | callbackUrl     | String  | no   | 200  | 代收回调地址，若不传, 则以商户配置为准                                 |
 

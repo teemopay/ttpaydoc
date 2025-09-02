@@ -20,18 +20,18 @@ description: 商户请求创建一个代付订单
 
 ### 请求参数
 
-| 字段            | 类型      | 必需  | 最大长度 | 描述               |
-| --------------- |---------|-----|------|------------------|
-| merchantOrderNo | String  | yes | 32   | 商户订单号            |
-| amount          | String  | yes | 20   | 代付金额 【货币:卢布】       |
-| bankCode        | String  | no  | 50   | 银行编码             |
-| bankName        | String  | no | 50   | 银行名称             |
-| accountType     | Integer | yes | 10   | 701:银行转帐         |
-| bankAccount     | String  | yes | 255  | 卡号 长度16位         |
-| realName        | String  | yes | 255  | 用户姓名。不得包含特殊字符，建议使用全大写，长度不少于 2 个字母；无需严格校验，但需符合正常姓名格式                 |
-| phone           | Stirng  | yes | 13   | 用户电话             |
-| callbackUrl     | String  | no  | 200  | 代付回调地址，若不传, 则以商户配置为准 |
-| sign            | String  | yes |      | 签名               |
+| 字段            | 类型      | 必需  | 最大长度 | 描述                                                  |
+| --------------- |---------|-----|------|-----------------------------------------------------|
+| merchantOrderNo | String  | yes | 32   | 商户订单号                                               |
+| amount          | String  | yes | 20   | 代付金额 【货币:卢布】                                        |
+| bankCode        | String  | no  | 50   | 银行编码                                                |
+| bankName        | String  | no | 50   | 银行名称                                                |
+| accountType     | Integer | yes | 10   | 701:银行转帐                                            |
+| bankAccount     | String  | yes | 255  | 卡号 长度16位                                            |
+| realName        | String  | yes | 255  | 用户姓名。不得包含特殊字符，建议使用全大写，长度不少于 2 个字母；无需严格校验，但需符合正常姓名格式 |
+| phone           | Stirng  | yes | 11   | 用户电话 （长度: 11位）                                      |
+| callbackUrl     | String  | no  | 200  | 代付回调地址，若不传, 则以商户配置为准                                |
+| sign            | String  | yes |      | 签名                                                  |
 
 ```json
 {

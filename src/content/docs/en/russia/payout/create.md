@@ -25,7 +25,7 @@ description: Create a payout order
 
 
 | Field           | Type   | Required | Length | Description                                                                                              |
-| --------------- | ------ |----------| ------ |----------------------------------------------------------------------------------------------------------|
+| --------------- | ------ |----------|--------|----------------------------------------------------------------------------------------------------------|
 | merchantOrderNo | String | yes      | 32     | Merchant order number                                                                                    |
 | amount          | String | yes      | 20     | Payout amount (in Ruble)                                                                                 |
 | bankCode        | String | no       | 50     | Bank code                                                                                                |
@@ -33,7 +33,7 @@ description: Create a payout order
 | accountType     | Int    | yes      |        | 701: TRANSFER                                                                                            |
 | bankAccount     | String | yes      | 255    | Card number: 16 digits in length                                                                         |
 | realName        | String | yes      | 255    |  User Name. It should not contain special characters. It is recommended to use all capital letters and have a length of at least 2 letters. There is no strict verification required, but it must conform to the normal name format.                                                                                                 |
-| phone           | String | yes      | 10-13  | Phone number 11 digits                                                                                   |
+| phone           | String | yes      | 11     | Phone number 11 digits                                                                                   |
 | callbackUrl     | String | no       | 200    | Callback URL for payout result; if not provided, defaults to merchant config                             |
 | sign            | String | yes      |        | Signature                                                                                                |
 
